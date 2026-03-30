@@ -1,71 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title> DchemSJ Portfolio Blog </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dchem Portfolio</title>
   <style>
-.entry {
-  background: #fff;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-  
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px auto;
-      background-color: #f9f9f9;
-      color: #222;
-      max-width: 800px;
-      line-height: 1.6;
-    }
-section {
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-}
     html {
       scroll-behavior: smooth;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #1f1f1f;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
     nav {
-      margin-bottom: 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 246, 248, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #dcdfe3;
+    }
+
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     nav a {
       text-decoration: none;
-      color: #0077cc;
-      margin-right: 15px;
+      color: #245c8f;
       font-weight: bold;
-      
+      font-size: 0.95rem;
     }
 
-    h1 {
-      margin-bottom: 5px;
+    nav a:hover {
+      color: #163a59;
     }
 
-    h2 {
-      color: #555;
+    .hero {
+      background: white;
+      border: 1px solid #dcdfe3;
+      border-radius: 18px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      margin-top: 20px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 2.8rem;
+      letter-spacing: -1px;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: normal;
+      color: #5a6570;
+    }
+
+    .tagline {
+      margin-top: 18px;
+      font-size: 1.05rem;
+      color: #2a2a2a;
+      max-width: 650px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #e7f1fa;
+      color: #245c8f;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    section {
+      margin-top: 32px;
+      background: white;
+      border: 1px solid #dcdfe3;
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    section h3 {
       margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.35rem;
     }
 
+    #about p,
+    #contact p,
+    #projects p {
+      margin-bottom: 14px;
+    }
+
+    .entry {
+      background: #fafbfd;
+      border: 1px solid #e2e6ea;
+      border-left: 4px solid #245c8f;
+      border-radius: 14px;
+      padding: 18px 16px;
+      margin-top: 18px;
+    }
+
+    .entry p {
+      margin: 0 0 12px;
+    }
+
+    .entry p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-intro {
+      color: #59636d;
+      margin-bottom: 14px;
+    }
+
+    .contact-box {
+      background: #f7f9fb;
+      border: 1px solid #e2e6ea;
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: inline-block;
+    }
+
+    .contact-box a {
+      color: #245c8f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: #6b7680;
+      font-size: 0.9rem;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero {
+        padding: 28px 22px;
+      }
+
+      section {
+        padding: 22px 18px;
+      }
+    }
   </style>
 </head>
-
 <body>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="#log">Log</a>
+    <div class="nav-inner">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#log">Logging the Chaos</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-    <section id="home">
+    <div class="container">
+    <section class="hero" id="home">
       <h1>DchemSJ</h1>
       <h2>Chemical Engineering Technology Student</h2>
-      <p> A portfolio-style blog documenting my journey in chemical engineering. A few Experiments, reflections, and a bit of chaos along the way. Exploring process design, data, and Chemical engineering fundamentals</p>
+      <p class="tagline"> A portfolio-style blog documenting my journey in chemical engineering. A few Experiments, reflections, and a bit of chaos along the way. Exploring process design, data, and Chemical engineering fundamentals</p>
+   <div class="badge">First-Year Student • Durham College</div>
     </section>
 
         <section id="about">
@@ -86,7 +217,7 @@ section {
 
               <section id="log">
               <h3>Notes, Experiments &amp; a bit of Chaos</h3>
-              <p>
+              <p class="section-intro">
                 A running log of what I’m learning, testing, and figuring out along the way.
               </p>
 
@@ -200,7 +331,8 @@ section {
   
    <section id="projects">
     <h3>Projects</h3>
-    <p>Projects coming soon.</p>
+    <p> Projects are currently in development. For now, this space is growing through
+        experiments, reflections, and coursework documented above.</p>
   </section>
 
 
