@@ -56,27 +56,38 @@
       color: #163a59;
     }
 
-    .hero {
-      background: white;
-      border: 1px solid #dcdfe3;
-      border-radius: 18px;
-      padding: 40px 30px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-      margin-top: 20px;
-    }
+  .hero {
+  background: url('lab-banner.jpg') center/cover no-repeat;
+  border-radius: 18px;
+  padding: 80px 30px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
 
-    .hero h1 {
-      margin: 0 0 8px;
-      font-size: 2.8rem;
-      letter-spacing: -1px;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
 
-    .hero h2 {
-      margin: 0;
-      font-size: 1.1rem;
-      font-weight: normal;
-      color: #5a6570;
-    }
+    .hero * {
+  position: relative;
+  z-index: 1;
+}
+    
+  .hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+  .hero h2 {
+  color: #dfe7ef;
+  margin-top: 10px;
+}
+
 
     .tagline {
       margin-top: 18px;
@@ -84,6 +95,11 @@
       color: #2a2a2a;
       max-width: 650px;
     }
+
+    .tagline {
+  color: #f1f5f9;
+  margin-top: 15px;
+}
 
     .badge {
       display: inline-block;
